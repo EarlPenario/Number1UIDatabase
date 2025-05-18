@@ -84,6 +84,8 @@ public class Main {
                         employee.setSalary(salary);
                         employee.setPresent(present);
                         employee.setAbsent(absent);
+                        frame.table.employees.set(selectedRow , employee);
+                        frame.table.fireTableDataChanged();
                         fireStoreConnection.updateEmployee(employee,selectedRow);
 
                 }else {
